@@ -768,20 +768,6 @@ header .header_contact_box .header_socials .call {
   }
 }
 
-.ActiveBtn {
-  background-color: #FCBA72;
-  transition: 0.4s;
-}
-.ActiveBtn svg {
-  transition: 0.4s;
-}
-.ActiveBtn svg path {
-  fill: #FFFFFF;
-}
-.ActiveBtn svg circle {
-  stroke: #FCBA72;
-}
-
 @media (max-width: 1581px) {
   .results_container {
     padding: 0 70px !important;
@@ -939,6 +925,22 @@ header .header_contact_box .header_socials .call {
   .video_container .pagination_box {
     display: none;
   }
+}
+.video_container .pagination_box > div {
+  transition: 0.4s;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+}
+.video_container .pagination_box > div:active {
+  background-color: #FCBA72;
+}
+.video_container .pagination_box > div:active svg path {
+  fill: #FFFFFF;
 }
 .video_container .video_box {
   align-items: center;

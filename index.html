@@ -550,13 +550,47 @@
 <div class="video_container max-w-[1920px] mx-auto w-full px-[100px] mt-[200px] flex flex-col gap-[24px]">
     <div><h1 class="title  uppercase text-[#666666] font-[Euclid Circular A] font-[500] text-[62px] max-w-[795px] w-full"><span class="text-[#1A1919]">Видео</span> наших клиентов</h1></div>
     <div class="video_box relative w-full flex gap-[20px]">
-<div class="video1 rounded-[24px] overflow-hidden relative"><div class="bg70"></div><video  id="video1" src="./assets/video/1.mp4" controls></video></div>
-<div class="video2 rounded-[24px] overflow-hidden relative"><div class="bg17"></div><video  id="video2" src="./assets/video/1.mp4" controls></video></div>
-<div class="video3 rounded-[24px] overflow-hidden relative"><div class="bg"></div><video  id="video3" src="./assets/video/1.mp4" controls></video></div>
-<div class="video4 rounded-[24px] overflow-hidden relative"><div class="bg"></div><video  id="video4" src="./assets/video/1.mp4" controls></video></div>
-<div class="video5 rounded-[24px] overflow-hidden relative"><div class="bg"></div><video  id="video5" src="./assets/video/1.mp4" controls></video></div>
-<div class="video6 rounded-[24px] overflow-hidden relative"><div class="bg17"></div><video  id="video6" src="./assets/video/1.mp4" controls></video></div>
-<div class="video7 rounded-[24px] overflow-hidden relative"><div class="bg70"></div><video  id="video7" src="./assets/video/1.mp4" controls></video></div>
+<div class="video1 video-wrapper rounded-[24px] overflow-hidden relative">
+  <div class="bg70"></div>
+  <video id="video1" src="./assets/video/1.mp4" preload="metadata"></video>
+  <div class="controls"><div class="timeline"><div class="progress"></div></div></div>
+</div>
+
+<div class="video2 video-wrapper rounded-[24px] overflow-hidden relative">
+  <div class="bg17"></div>
+  <video id="video2" src="./assets/video/2.mp4" preload="metadata"></video>
+  <div class="controls"><div class="timeline"><div class="progress"></div></div></div>
+</div>
+
+<div class="video3 video-wrapper rounded-[24px] overflow-hidden relative">
+  <div class="bg"></div>
+  <video id="video3" src="./assets/video/3.mp4" preload="metadata"></video>
+  <div class="controls"><div class="timeline"><div class="progress"></div></div></div>
+</div>
+
+<div class="video4 video-wrapper rounded-[24px] overflow-hidden relative">
+  <div class="bg"></div>
+  <video id="video4" src="./assets/video/4.mp4" preload="metadata"></video>
+  <div class="controls"><div class="timeline"><div class="progress"></div></div></div>
+</div>
+
+<div class="video5 video-wrapper rounded-[24px] overflow-hidden relative">
+  <div class="bg"></div>
+  <video id="video5" src="./assets/video/5.mp4" preload="metadata"></video>
+  <div class="controls"><div class="timeline"><div class="progress"></div></div></div>
+</div>
+
+<div class="video6 video-wrapper rounded-[24px] overflow-hidden relative">
+  <div class="bg17"></div>
+  <video id="video6" src="./assets/video/6.mp4" preload="metadata"></video>
+  <div class="controls"><div class="timeline"><div class="progress"></div></div></div>
+</div>
+
+<div class="video7 video-wrapper rounded-[24px] overflow-hidden relative">
+  <div class="bg70"></div>
+  <video id="video7" src="./assets/video/7.mp4" preload="metadata"></video>
+  <div class="controls"><div class="timeline"><div class="progress"></div></div></div>
+</div>
 
 <div class="pagination_box absolute top-[50%] left-0 translate-y-[-50%] flex w-full justify-between">
 <div class="cursor-pointer DisableBtn  " id="LeftBtn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -572,6 +606,72 @@
     </div>
     <div class="bg-[#F1F1F2] rounded-[40px] h-[65px] w-full flex items-center justify-center"><span class="text-[#666666] font-[Gordita] font-[500] text-[14px]">Ознакомтесь с о всеми результатами</span></div>
 </div>
+<style>
+  .video-wrapper video {
+    width: 100%;
+    cursor: pointer;
+    display: block;
+  }
+
+  .controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 8px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  }
+
+  .timeline {
+    height: 6px;
+    background-color: #444;
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .progress {
+    height: 100%;
+    width: 0%;
+    background-color: #70c1ff; /* цвет прогресса */
+  }
+</style>
+<script>
+  const videos = document.querySelectorAll('.video-wrapper');
+
+  videos.forEach(wrapper => {
+    const video = wrapper.querySelector('video');
+    const timeline = wrapper.querySelector('.timeline');
+    const progress = wrapper.querySelector('.progress');
+
+    // Убрать стандартные controls
+    video.controls = false;
+
+    // Клик по видео — play/pause
+    video.addEventListener('click', () => {
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    });
+
+    // Обновляем прогресс бар
+    video.addEventListener('timeupdate', () => {
+      const percent = (video.currentTime / video.duration) * 100;
+      progress.style.width = `${percent}%`;
+    });
+
+    // Клик по таймлайну — перемотка
+    timeline.addEventListener('click', (e) => {
+      const rect = timeline.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const width = rect.width;
+      const percent = clickX / width;
+      video.currentTime = percent * video.duration;
+    });
+  });
+</script>
 
     <script src="./script.js"></script>
   </body>

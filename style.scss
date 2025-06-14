@@ -722,19 +722,7 @@ font-size: 12px;
 
 
 
-.ActiveBtn {
-  background-color: #FCBA72;
-      transition: .4s;
-    svg {
-   transition: .4s;
-      path {
-        fill: #FFFFFF;
-      }
-      circle {
-        stroke:#FCBA72
-      }
-    }
-}
+
 .results_container {
     @media (max-width: 1581px) {
     padding: 0 70px !important;
@@ -748,6 +736,7 @@ font-size: 12px;
   @media (max-width:1034px) {
     display: none;
   }
+
 }
 
   .left_slide_btn {
@@ -882,6 +871,24 @@ p {
   .pagination_box {
       @media (max-width:986px) {
       display: none;
+      }
+      &>div {
+  transition: .4s;
+        width: 60px;
+        height: 60px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #FFFFFF;
+        &:active {
+          background-color: #FCBA72;
+          svg {
+            path {
+              fill: #FFFFFF;
+            }
+          }
+        }
       }
   }
   .video_box {
