@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elit Clinic</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="z-[99999999999999999999]">
+      <div class="header_logo_box">
+        <img src="./assets/svg/logo.svg" alt="" />
+        <div class="header_menu_bar_box" id="header_bar_btn">
+          <img src="./assets/svg/bar.svg" />
+        </div>
+      </div>
+      <div class="header_nav_box" id="header_nav">
+        <ul>
+          <li><a href="">Главная</a></li>
+          <li class="arrow">Услуги</li>
+          <li class="header_nav_result"><a href="">Результат</a></li>
+          <li><a href="">Контакты</a></li>
+          <li class="arrow">Еще</li>
+        </ul>
+      </div>
+      <div class="header_contact_box">
+        <div class="header_contact items-center justify-center">
+          <h1
+            class="text-[18px] text-black font-[Gordita] font-[500] text-[18px]"
+          >
+            +7 812 344-54-34
+          </h1>
+          <button
+            class="bg-[#FCBA72] flex items-center justify-center gap-[12px] rounded-[40px] px-[14px] h-[31px]"
+          >
+            <h1 class="text-white text-[12px] font-[Gordita] font-[500]">
+              Консультация
+            </h1>
+            <img src="./assets/img/arrow.png" alt="" />
+          </button>
+        </div>
+        <div class="header_socials">
+          <img class="call" src="./assets/svg/call.svg" alt="" />
+          <img class="cursor-pointer" src="./assets/svg/insta.svg" alt="" /><img
+            class="cursor-pointer"
+            src="./assets/svg/tg.svg"
+            alt=""
+          /><img class="cursor-pointer" src="./assets/svg/wp.svg" alt="" />
+        </div>
+      </div>
+    </header>
+
+    <div class="banner_container">
+      <div class="banner rounded-[24px] px-[100px] py-[71px]">
+        <div class="left_bar flex flex-col absolute z-[9999]">
+          <div class="">
+            <h1
+              class="font-[Euclid Circular A] text-[125px] max-w-[810px] leading-none text-white title"
+            >
+              ПЕРЕСАДКА
+            </h1>
+            <div class="flex items-center banner_info_box_bottom">
+              <h1
+                class="font-[Euclid Circular A] text-[125px] max-w-[810px] leading-none text-[#FEDDB9] title"
+              >
+                ВОЛОС
+              </h1>
+              <p
+                class="uppercase text-[#FFFFFF] font-[Euclid Circular A] max-w-[308px] ml-[37px] text-[26px] title_description"
+              >
+                по методу доктора Кексала Дениза
+              </p>
+            </div>
+          </div>
+          <div class="description">
+            <p
+              class="text-white font-[Gordita] text-[20px] max-w-[681px] w-full text-left"
+            >
+              Профильная клиника с опытными врачами и современными методиками
+              востановления волос
+            </p>
+          </div>
+          <div class="mt-[60px] button">
+            <button
+              class="bg-[#FCBA72] flex items-center justify-center gap-[12px] rounded-[40px] px-[14px] w-[224px] h-[44px]"
+            >
+              <h1 class="text-white text-[14px] font-[Gordita] font-[500]">
+                ЗАПИСЬ НА ПРИЕМ
+              </h1>
+              <img src="./assets/img/arrow.png" alt="" />
+            </button>
+          </div>
+          <div class="flex gap-[40px] items-center mt-[61px] info">
+            <div class="flex items-center gap-[16px]">
+              <img src="./assets/img/banner1.png" alt="" /><span
+                class="text-white font-[Gordita] text-[20px] max-w-[140px] w-full font-[400] leading-none"
+                >до 7500 графов в день</span
+              >
+            </div>
+            <div class="flex items-center gap-[16px]">
+              <img src="./assets/img/banner2.png" alt="" /><span
+                class="text-white font-[Gordita] text-[20px] max-w-[140px] w-full font-[400] leading-none"
+                >Без вреда для пациента</span
+              >
+            </div>
+            <div class="flex items-center gap-[16px]">
+              <img src="./assets/img/banner3.png" alt="" /><span
+                class="text-white font-[Gordita] text-[20px] max-w-[140px] w-full font-[400] leading-none"
+                >Без деления на этапы</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="doctor z-[0]">
+          <img src="./assets/img/doctor.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="information_container max-w-[1920px] w-full mx-auto flex flex-col gap-[40px]"
+    >
+      <div class="information_box">
+        <div
+          class="top_bar flex justify-between items-center h-[400px] gap-[40px]"
+        >
+          <div class="h-full flex-1 block1">
+            <p
+              class="text-[#666666] leading-none font-[Euclid Circular A] font-[500] text-[62px]"
+            >
+              До 98% <span class="text-[#1A1919]">приживаемости</span> —
+              результат, который сохраняется
+            </p>
+          </div>
+          <div
+            class="block2 relative justify-between h-full flex flex-col flex-1 rounded-[24px] bg-[#FEE8D0] overflow-hidden py-[36px] px-[50px]"
+          >
+            <!-- info -->
+            <div>
+              <span class="text-[#000000] font-[Euclid Circular A] text-[16px]"
+                >01</span
+              >
+            </div>
+            <div class="flex flex-col gap-[24px]">
+              <div>
+                <h1
+                  class="text-[#1A1919] text-[Euclid Circular A] text-[34px] max-w-[362px] leading-none"
+                >
+                  Пересадка волос у мужчин
+                </h1>
+              </div>
+              <div>
+                <p
+                  class="text-[#666666] font-[Gordita] text-[16px] max-w-[312px] w-full"
+                >
+                  Эффективное восстановление линии роста и плотности волос
+                </p>
+              </div>
+            </div>
+            <div>
+              <span
+                class="text-[#D29B5F] font-[Euclid Circular A] font-[600] text-[20px]"
+                >от 170 000 ₽</span
+              >
+            </div>
+
+            <!-- button -->
+            <button
+              class="absolute rounded-[50px] bg-[#FCBA72] w-[33px] h-[33px] flex items-center justify-center cursor-pointer bottom-[37px] right-[52px] z-[99999]"
+            >
+              <img src="./assets/img/arrow.png" alt="" />
+            </button>
+            <!-- img -->
+            <img
+              class="gridimg absolute h-[432px] w-[432px] right-0 flex"
+              src="./assets/img/grid1.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div
+          class="bottom_bar h-[400px] mt-[42px] flex justify-between gap-[40px]"
+        >
+          <div
+            class="bg-[#FEE8D0] rounded-[24px] py-[37px] px-[39px] relative flex-1 flex flex-col justify-between overflow-hidden"
+          >
+            <div>
+              <span class="text-[#000000] font-[Euclid Circular A] text-[16px]"
+                >02</span
+              >
+            </div>
+            <div class="flex flex-col gap-[24px]">
+              <div>
+                <h1
+                  class="text-[#1A1919] text-[Euclid Circular A] text-[34px] max-w-[362px] leading-none"
+                >
+                  Пересадка волос у женщин
+                </h1>
+              </div>
+              <div>
+                <p
+                  class="text-[#666666] font-[Gordita] text-[16px] max-w-[312px] w-full"
+                >
+                  Решение проблемы диффузного и локального поредения
+                </p>
+              </div>
+            </div>
+            <div>
+              <span
+                class="text-[#D29B5F] font-[Euclid Circular A] font-[600] text-[20px]"
+                >от 170 000 ₽</span
+              >
+            </div>
+
+            <!-- button -->
+            <button
+              class="absolute rounded-[50px] bg-[#FCBA72] w-[33px] h-[33px] flex items-center justify-center cursor-pointer bottom-[37px] right-[52px] z-[99999]"
+            >
+              <img src="./assets/img/arrow.png" alt="" />
+            </button>
+          </div>
+          <div
+            class="bg-[#F1F1F2] rounded-[24px] py-[37px] px-[39px] relative flex-[2] overflow-hidden flex flex-col justify-between"
+          >
+            <div>
+              <span class="text-[#000000] font-[Euclid Circular A] text-[16px]"
+                >03</span
+              >
+            </div>
+            <div class="flex flex-col gap-[24px]">
+              <div>
+                <h1
+                  class="text-[#1A1919] text-[Euclid Circular A] text-[34px] max-w-[362px] leading-none"
+                >
+                  Пересадка волос на бороду и усы
+                </h1>
+              </div>
+              <div>
+                <p
+                  class="text-[#666666] font-[Gordita] text-[16px] max-w-[312px] w-full"
+                >
+                  Чёткий контур и естественный рост без пробелов
+                </p>
+              </div>
+            </div>
+            <div>
+              <span
+                class="text-[#D29B5F] font-[Euclid Circular A] font-[600] text-[20px]"
+                >от 170 000 ₽</span
+              >
+            </div>
+
+            <!-- button -->
+            <button
+              class="absolute rounded-[50px] bg-[#FCBA72] w-[33px] h-[33px] flex items-center justify-center cursor-pointer bottom-[37px] right-[52px] z-[99999]"
+            >
+              <img src="./assets/img/arrow.png" alt="" />
+            </button>
+            <!-- img -->
+            <img
+              class="gridimg absolute h-[375px] w-[375px] right-0 bottom-0 flex"
+              src="./assets/img/grid2.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="bg-[#FEE8D0] rounded-[24px] py-[37px] px-[39px] relative flex-1 flex flex-col justify-between overflow-hidden"
+          >
+            <div>
+              <span class="text-[#000000] font-[Euclid Circular A] text-[16px]"
+                >04</span
+              >
+            </div>
+            <div class="flex flex-col gap-[24px]">
+              <div>
+                <h1
+                  class="text-[#1A1919] text-[Euclid Circular A] text-[34px] max-w-[362px] leading-none"
+                >
+                  Пересадка на рубцы и шрамы
+                </h1>
+              </div>
+              <div>
+                <p
+                  class="text-[#666666] font-[Gordita] text-[16px] max-w-[312px] w-full"
+                >
+                  Эффективное восстановление линии роста и плотности волос
+                </p>
+              </div>
+            </div>
+            <div>
+              <span
+                class="text-[#D29B5F] font-[Euclid Circular A] font-[600] text-[20px]"
+                >от 170 000 ₽</span
+              >
+            </div>
+
+            <!-- button -->
+            <button
+              class="absolute rounded-[50px] bg-[#FCBA72] w-[33px] h-[33px] flex items-center justify-center cursor-pointer bottom-[37px] right-[52px] z-[99999]"
+            >
+              <img src="./assets/img/arrow.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="information_description w-full bg-[#F1F1F2] rounded-[40px] h-[65px] flex items-center justify-center"
+      >
+        <span
+          class="text-[#666666] uppercase font-[Gordita] font-[500] text-[14px]"
+          >Ознакомтесь с о всеми услугами</span
+        >
+      </div>
+    </div>
+
+    <div
+      class="results_container max-w-[1920px] w-full mx-auto px-[100px] mt-[150px] flex flex-col gap-[60px]"
+    >
+      <div class="top_bar justify-between flex items-end ">
+        <div class="flex items-end gap-[40px]">
+          <div>
+            <div class="flex items-center gap-[10px] h-full">
+              <h1 style="font-family: Euclid Circular A;"
+                class="uppercase text-[#666666] font-[Euclid Circular A] font-[500] text-[62px] leading-none title"
+              >
+                от <span class="text-[#1A1919]">первых шагов</span>
+              </h1>
+              <div
+                class="text-[#FFFFFF] font-[Euclid Circular A] text-[24px] bg-[#FC7272] text-nowrap px-[10px] flex items-center justify-center rounded-[32px]"
+              >
+                238 +
+              </div>
+            </div>
+            <div>
+              <h1 style="font-family: Euclid Circular A;"
+                class="title uppercase text-[#666666] font-[Euclid Circular A] font-[500] text-[62px] leading-none"
+              >
+                до полного <span class="text-[#1A1919]">результата</span>
+              </h1>
+            </div>
+          </div>
+          <div class="flex items-center gap-[8px] h-full pagination_box">
+            <div id="LeftSliderBtn"
+              class="left_slide_btn  duration-[400ms] cursor-pointer rounded-[50px]"
+            >
+              <svg
+                class="duration-[400ms]"
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M32 22.5C32.8284 22.5 33.5 23.1716 33.5 24C33.5 24.8284 32.8284 25.5 32 25.5L32 22.5ZM14.9393 25.0607C14.3536 24.4749 14.3536 23.5251 14.9393 22.9393L24.4853 13.3934C25.0711 12.8076 26.0208 12.8076 26.6066 13.3934C27.1924 13.9792 27.1924 14.9289 26.6066 15.5147L18.1213 24L26.6066 32.4853C27.1924 33.0711 27.1924 34.0208 26.6066 34.6066C26.0208 35.1924 25.0711 35.1924 24.4853 34.6066L14.9393 25.0607ZM32 24L32 25.5L16 25.5L16 24L16 22.5L32 22.5L32 24Z"
+                  fill="#B3B2B2"
+                />
+                <circle
+                  cx="24"
+                  cy="24"
+                  r="23.5"
+                  transform="matrix(1 0 0 -1 0 48)"
+                  stroke="#B3B2B2"
+                />
+              </svg>
+            </div>
+            <div id="RightSliderBtn"
+              class="right_slide_btn cursor-pointer rounded-[50px] overflow-hidden"
+            >
+              <svg
+                class="rotate-[180deg]"
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M32 22.5C32.8284 22.5 33.5 23.1716 33.5 24C33.5 24.8284 32.8284 25.5 32 25.5L32 22.5ZM14.9393 25.0607C14.3536 24.4749 14.3536 23.5251 14.9393 22.9393L24.4853 13.3934C25.0711 12.8076 26.0208 12.8076 26.6066 13.3934C27.1924 13.9792 27.1924 14.9289 26.6066 15.5147L18.1213 24L26.6066 32.4853C27.1924 33.0711 27.1924 34.0208 26.6066 34.6066C26.0208 35.1924 25.0711 35.1924 24.4853 34.6066L14.9393 25.0607ZM32 24L32 25.5L16 25.5L16 24L16 22.5L32 22.5L32 24Z"
+                  fill="#B3B2B2"
+                />
+                <circle
+                  cx="24"
+                  cy="24"
+                  r="23.5"
+                  transform="matrix(1 0 0 -1 0 48)"
+                  stroke="#B3B2B2"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button
+            class="button_see_history bg-[#FCBA72] flex items-center justify-center gap-[16px] rounded-[40px] h-[49px] w-[236px]"
+          >
+            <h1 class="font-[Gordita] font-[500] text-[14px] text-[#F7F7F7]">
+              ЧИТАТЬ ВСЕ ИСТОРИИ
+            </h1>
+            <img src="./assets/img/arrow.png" alt="" />
+          </button>
+        </div>
+      </div>
+      <div class="swipper overflow-hidden w-full">
+      <div id="SliderBox" class="duration-[400ms] slider_box flex gap-[24px] shrink-0 h-[380px]">
+        <div class="flex gap-[24px] justify-between items-center shrink-0 w-[100%] h-full">
+          <div class="flex items-center gap-[4px] h-full">
+            <div
+              class="info_box bg-[#F7F7F7] border border-[#EAEAEB] rounded-[24px] py-[40px] px-[20px] h-full flex justify-center flex-col items-start"
+            >
+              <h1 class="uppercase text-[#666666] font-[Euclid Circular A] text-[27px] max-w-[400px] w-full">Год после пересадки волос</h1>
+              <p class="text-[#666666] font-[Gordita] text-[12px] max-w-[287px] w-full">Пациент с 3 степенью андрогенетической алопеции, выраженной в виде залысин в лобно-височной зоне и небольшого поредения на макушке. До операции проходил консервативную терапию у трихолога для остановки активного выпадения. Пересажено 3500 графтов.</p>
+            </div>
+            <div class="rounded-[24px] overflow-hidden h-full aspect-square shrink-0  relative"><img class="h-full aspect-square" src="./assets/img/slide1.png" alt="">
+            <div class="flex w-full justify-between absolute bottom-[20px] left-0 px-[20px]">
+                <span class="text-[#C0B4A1] font-[Gordita] text-[11px] font-[500]">До операции</span>
+                <span class="text-[#C0B4A1] font-[Gordita] text-[11px] font-[500]">После</span>
+            </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-[4px] h-full">
+            <div
+              class="info_box bg-[#F7F7F7] border border-[#EAEAEB] rounded-[24px] py-[40px] px-[20px] h-full flex justify-center flex-col items-start"
+            >
+              <h1 class="uppercase text-[#666666] font-[Euclid Circular A] text-[27px] max-w-[400px] w-full">Год после пересадки волос</h1>
+              <p class="text-[#666666] font-[Gordita] text-[12px] max-w-[287px] w-full">Пациент с 3 степенью андрогенетической алопеции, выраженной в виде залысин в лобно-височной зоне и небольшого поредения на макушке. До операции проходил консервативную терапию у трихолога для остановки активного выпадения. Пересажено 3500 графтов.</p>
+            </div>
+    <div class="rounded-[24px] overflow-hidden h-full aspect-square shrink-0  relative"><img class="h-full aspect-square" src="./assets/img/slide1.png" alt="">
+             <div class="flex w-full justify-between absolute bottom-[20px] left-0 px-[20px]">
+                <span class="text-[#C0B4A1] font-[Gordita] text-[11px] font-[500]">До операции</span>
+                <span class="text-[#C0B4A1] font-[Gordita] text-[11px] font-[500]">После</span>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-[24px] justify-between items-center shrink-0 w-[100%] h-full">
+          <div class="flex items-center gap-[4px] h-full ">
+            <div
+              class="info_box bg-[#F7F7F7] border border-[#EAEAEB] rounded-[24px] py-[40px] px-[20px] h-full  flex justify-center flex-col items-start"
+            >
+              <h1 class="uppercase text-[#666666] font-[Euclid Circular A] text-[27px] max-w-[295px] w-full">Год после пересадки волос</h1>
+
+<p class="text-[#666666] font-[Gordita] text-[12px] max-w-[400px] w-full">Пациент с 3 степенью андрогенетической алопеции, выраженной в виде залысин в лобно-височной зоне и небольшого поредения на макушке. До операции проходил консервативную терапию у трихолога для остановки активного выпадения. Пересажено 3500 графтов.</p>            </div>
+ <div class="rounded-[24px] overflow-hidden h-full aspect-square shrink-0  relative"><img class="h-full aspect-square" src="./assets/img/slide1.png" alt="">
+          <div class="flex w-full justify-between absolute bottom-[20px] left-0 px-[20px]">
+            <span class="text-[#C0B4A1] font-[Gordita] text-[11px] font-[500]">До операции</span>
+                <span class="text-[#C0B4A1] font-[Gordita] text-[11px] font-[500]">После</span>
+            </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-[4px] h-full">
+            <div
+              class=" info_box bg-[#F7F7F7] border border-[#EAEAEB] rounded-[24px] py-[40px] px-[20px] h-full flex justify-center flex-col items-start"
+            >
+              <h1 class="uppercase text-[#666666] font-[Euclid Circular A] text-[27px] max-w-[295px] w-full">Год после пересадки волос</h1>
+
+<p class="text-[#666666] font-[Gordita] text-[12px] max-w-[400px] w-full">Пациент с 3 степенью андрогенетической алопеции, выраженной в виде залысин в лобно-височной зоне и небольшого поредения на макушке. До операции проходил консервативную терапию у трихолога для остановки активного выпадения. Пересажено 3500 графтов.</p>            </div>
+ <div class="rounded-[24px] overflow-hidden h-full aspect-square shrink-0  relative"><img class="h-full aspect-square" src="./assets/img/slide1.png" alt="">
+            <div class="flex w-full justify-between absolute bottom-[20px] left-0 px-[20px]">
+                  <span class="text-[#C0B4A1] font-[Gordita] text-[11px] font-[500]">До операции</span>
+                <span class="text-[#C0B4A1] font-[Gordita] text-[11px] font-[500]">После</span>
+            </div>
+            </div>
+          </div>
+        </div>
+         <div class="flex gap-[24px] justify-between items-center shrink-0 w-[100%] h-full">
+          <div class="flex items-center gap-[4px] h-full ">
+            <div
+              class="info_box bg-[#F7F7F7] border border-[#EAEAEB] rounded-[24px] py-[40px] px-[20px] h-full  flex justify-center flex-col items-start"
+            >
+              <h1 class="uppercase text-[#666666] font-[Euclid Circular A] text-[27px] max-w-[295px] w-full">Год после пересадки волос</h1>
+
+<p class="text-[#666666] font-[Gordita] text-[12px] max-w-[400px] w-full">Пациент с 3 степенью андрогенетической алопеции, выраженной в виде залысин в лобно-височной зоне и небольшого поредения на макушке. До операции проходил консервативную терапию у трихолога для остановки активного выпадения. Пересажено 3500 графтов.</p>            </div>
+ <div class="rounded-[24px] overflow-hidden h-full aspect-square shrink-0  relative"><img class="h-full aspect-square" src="./assets/img/slide1.png" alt="">
+          <div class="flex w-full justify-between absolute bottom-[20px] left-0 px-[20px]">
+            <span class="text-[#C0B4A1] font-[Gordita] text-[11px] font-[500]">До операции</span>
+                <span class="text-[#C0B4A1] font-[Gordita] text-[11px] font-[500]">После</span>
+            </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-[4px] h-full">
+            <div
+              class="info_box bg-[#F7F7F7] border border-[#EAEAEB] rounded-[24px] py-[40px] px-[20px] h-full flex justify-center flex-col items-start"
+            >
+              <h1 class="uppercase text-[#666666] font-[Euclid Circular A] text-[27px] max-w-[295px] w-full">Год после пересадки волос</h1>
+
+<p class="text-[#666666] font-[Gordita] text-[12px] max-w-[400px] w-full">Пациент с 3 степенью андрогенетической алопеции, выраженной в виде залысин в лобно-височной зоне и небольшого поредения на макушке. До операции проходил консервативную терапию у трихолога для остановки активного выпадения. Пересажено 3500 графтов.</p>            </div>
+ <div class="rounded-[24px] overflow-hidden h-full aspect-square shrink-0  relative"><img class="h-full aspect-square" src="./assets/img/slide1.png" alt="">
+            <div class="flex w-full justify-between absolute bottom-[20px] left-0 px-[20px]">
+                  <span class="text-[#C0B4A1] font-[Gordita] text-[11px] font-[500]">До операции</span>
+                <span class="text-[#C0B4A1] font-[Gordita] text-[11px] font-[500]">После</span>
+            </div>
+            </div>
+          </div>
+        </div>
+         <div class="flex gap-[24px] justify-between items-center shrink-0 w-[100%] h-full">
+          <div class="flex items-center gap-[4px] h-full ">
+            <div
+              class="info_box bg-[#F7F7F7] border border-[#EAEAEB] rounded-[24px] py-[40px] px-[20px] h-full  flex justify-center flex-col items-start"
+            >
+              <h1 class="uppercase text-[#666666] font-[Euclid Circular A] text-[27px] max-w-[295px] w-full">Год после пересадки волос</h1>
+
+<p class="text-[#666666] font-[Gordita] text-[12px] max-w-[400px] w-full">Пациент с 3 степенью андрогенетической алопеции, выраженной в виде залысин в лобно-височной зоне и небольшого поредения на макушке. До операции проходил консервативную терапию у трихолога для остановки активного выпадения. Пересажено 3500 графтов.</p>            </div>
+ <div class="rounded-[24px] overflow-hidden h-full aspect-square shrink-0  relative"><img class="h-full aspect-square" src="./assets/img/slide1.png" alt="">
+          <div class="flex w-full justify-between absolute bottom-[20px] left-0 px-[20px]">
+            <span class="text-[#C0B4A1] font-[Gordita] text-[11px] font-[500]">До операции</span>
+                <span class="text-[#C0B4A1] font-[Gordita] text-[11px] font-[500]">После</span>
+            </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-[4px] h-full">
+            <div
+              class=" info_box bg-[#F7F7F7] border border-[#EAEAEB] rounded-[24px] py-[40px] px-[20px] h-full flex justify-center flex-col items-start"
+            >
+              <h1 class="uppercase text-[#666666] font-[Euclid Circular A] text-[27px] max-w-[295px] w-full">Год после пересадки волос</h1>
+
+<p class="text-[#666666] font-[Gordita] text-[12px] max-w-[400px] w-full">Пациент с 3 степенью андрогенетической алопеции, выраженной в виде залысин в лобно-височной зоне и небольшого поредения на макушке. До операции проходил консервативную терапию у трихолога для остановки активного выпадения. Пересажено 3500 графтов.</p>            </div>
+ <div class="rounded-[24px] overflow-hidden h-full aspect-square shrink-0  relative"><img class="h-full aspect-square" src="./assets/img/slide1.png" alt="">
+            <div class="flex w-full justify-between absolute bottom-[20px] left-0 px-[20px]">
+                  <span class="text-[#C0B4A1] font-[Gordita] text-[11px] font-[500]">До операции</span>
+                <span class="text-[#C0B4A1] font-[Gordita] text-[11px] font-[500]">После</span>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+       <button
+            class="button_see_history_low_res bg-[#FCBA72] flex items-center justify-center gap-[16px] rounded-[40px] h-[49px] w-[236px]"
+          >
+            <h1 class="font-[Gordita] font-[500] text-[14px] text-[#F7F7F7]">
+              ЧИТАТЬ ВСЕ ИСТОРИИ
+            </h1>
+        
+          </button>
+    </div>
+
+
+<div class="video_container max-w-[1920px] mx-auto w-full px-[100px] mt-[200px] flex flex-col gap-[24px]">
+    <div><h1 class="title  uppercase text-[#666666] font-[Euclid Circular A] font-[500] text-[62px] max-w-[795px] w-full"><span class="text-[#1A1919]">Видео</span> наших клиентов</h1></div>
+    <div class="video_box relative w-full flex gap-[20px]">
+<div class="video1 rounded-[24px] overflow-hidden relative"><div class="bg70"></div><video id="video1" src="./assets/video/1.mp4" controls></video></div>
+<div class="video2 rounded-[24px] overflow-hidden relative"><div class="bg17"></div><video id="video2" src="./assets/video/1.mp4" controls></video></div>
+<div class="video3 rounded-[24px] overflow-hidden relative"><div class="bg"></div><video id="video3" src="./assets/video/1.mp4" controls></video></div>
+<div class="video4 rounded-[24px] overflow-hidden relative"><div class="bg"></div><video id="video4" src="./assets/video/1.mp4" controls></video></div>
+<div class="video5 rounded-[24px] overflow-hidden relative"><div class="bg"></div><video id="video5" src="./assets/video/1.mp4" controls></video></div>
+<div class="video6 rounded-[24px] overflow-hidden relative"><div class="bg17"></div><video id="video6" src="./assets/video/1.mp4" controls></video></div>
+<div class="video7 rounded-[24px] overflow-hidden relative"><div class="bg70"></div><video id="video7" src="./assets/video/1.mp4" controls></video></div>
+
+<div class="pagination_box absolute top-[50%] left-0 translate-y-[-50%] flex w-full justify-between">
+<div class="cursor-pointer DisableBtn  " id="LeftBtn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.2856 10.5C23.1141 10.5 23.7856 11.1716 23.7856 12C23.7856 12.8284 23.1141 13.5 22.2856 13.5L22.2856 10.5ZM1.22499 13.0607C0.639198 12.4749 0.639198 11.5251 1.22499 10.9393L10.7709 1.3934C11.3567 0.807612 12.3065 0.807612 12.8922 1.3934C13.478 1.97919 13.478 2.92893 12.8922 3.51472L4.40697 12L12.8922 20.4853C13.478 21.0711 13.478 22.0208 12.8922 22.6066C12.3065 23.1924 11.3567 23.1924 10.7709 22.6066L1.22499 13.0607ZM22.2856 12L22.2856 13.5L2.28564 13.5L2.28564 12L2.28564 10.5L22.2856 10.5L22.2856 12Z" fill="#B3B2B2"/>
+</svg>
+
+</div>
+<div class="cursor-pointer" id="NextBtn"><svg class="rotate-[180deg]" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.2856 10.5C23.1141 10.5 23.7856 11.1716 23.7856 12C23.7856 12.8284 23.1141 13.5 22.2856 13.5L22.2856 10.5ZM1.22499 13.0607C0.639198 12.4749 0.639198 11.5251 1.22499 10.9393L10.7709 1.3934C11.3567 0.807612 12.3065 0.807612 12.8922 1.3934C13.478 1.97919 13.478 2.92893 12.8922 3.51472L4.40697 12L12.8922 20.4853C13.478 21.0711 13.478 22.0208 12.8922 22.6066C12.3065 23.1924 11.3567 23.1924 10.7709 22.6066L1.22499 13.0607ZM22.2856 12L22.2856 13.5L2.28564 13.5L2.28564 12L2.28564 10.5L22.2856 10.5L22.2856 12Z" fill="#B3B2B2"/>
+</svg>
+</div>
+</div>
+    </div>
+    <div class="bg-[#F1F1F2] rounded-[40px] h-[65px] w-full flex items-center justify-center"><span class="text-[#666666] font-[Gordita] font-[500] text-[14px]">Ознакомтесь с о всеми результатами</span></div>
+</div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
