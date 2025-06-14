@@ -593,7 +593,7 @@
 </div>
 
 <div class="pagination_box absolute top-[50%] left-0 translate-y-[-50%] flex w-full justify-between">
-<div class="cursor-pointer DisableBtn  " id="LeftBtn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<div class="cursor-pointer DisableBtn" id="LeftBtn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M22.2856 10.5C23.1141 10.5 23.7856 11.1716 23.7856 12C23.7856 12.8284 23.1141 13.5 22.2856 13.5L22.2856 10.5ZM1.22499 13.0607C0.639198 12.4749 0.639198 11.5251 1.22499 10.9393L10.7709 1.3934C11.3567 0.807612 12.3065 0.807612 12.8922 1.3934C13.478 1.97919 13.478 2.92893 12.8922 3.51472L4.40697 12L12.8922 20.4853C13.478 21.0711 13.478 22.0208 12.8922 22.6066C12.3065 23.1924 11.3567 23.1924 10.7709 22.6066L1.22499 13.0607ZM22.2856 12L22.2856 13.5L2.28564 13.5L2.28564 12L2.28564 10.5L22.2856 10.5L22.2856 12Z" fill="#B3B2B2"/>
 </svg>
 
@@ -636,42 +636,6 @@
     background-color: #70c1ff; /* цвет прогресса */
   }
 </style>
-<script>
-  const videos = document.querySelectorAll('.video-wrapper');
-
-  videos.forEach(wrapper => {
-    const video = wrapper.querySelector('video');
-    const timeline = wrapper.querySelector('.timeline');
-    const progress = wrapper.querySelector('.progress');
-
-    // Убрать стандартные controls
-    video.controls = false;
-
-    // Клик по видео — play/pause
-    video.addEventListener('click', () => {
-      if (video.paused) {
-        video.play();
-      } else {
-        video.pause();
-      }
-    });
-
-    // Обновляем прогресс бар
-    video.addEventListener('timeupdate', () => {
-      const percent = (video.currentTime / video.duration) * 100;
-      progress.style.width = `${percent}%`;
-    });
-
-    // Клик по таймлайну — перемотка
-    timeline.addEventListener('click', (e) => {
-      const rect = timeline.getBoundingClientRect();
-      const clickX = e.clientX - rect.left;
-      const width = rect.width;
-      const percent = clickX / width;
-      video.currentTime = percent * video.duration;
-    });
-  });
-</script>
 
     <script src="./script.js"></script>
   </body>

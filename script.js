@@ -1,4 +1,4 @@
-/// header 
+
 const MenuBtn = document.getElementById('header_bar_btn');
 const HeaderNav = document.getElementById('header_nav');
 var HeaderNavOpen = false;
@@ -111,7 +111,40 @@ const videos = [
   "/assets/video/7.mp4",
   "/assets/video/8.mp4"
 ];
+const videos2 = document.querySelectorAll('.video-wrapper');
 
+  videos2.forEach(wrapper => {
+    const video = wrapper.querySelector('video');
+    const timeline = wrapper.querySelector('.timeline');
+    const progress = wrapper.querySelector('.progress');
+
+    // Убрать стандартные controls
+    video.controls = false;
+
+    // Клик по видео — play/pause
+    video.addEventListener('click', () => {
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    });
+
+    // Обновляем прогресс бар
+    video.addEventListener('timeupdate', () => {
+      const percent = (video.currentTime / video.duration) * 100;
+      progress.style.width = `${percent}%`;
+    });
+
+    // Клик по таймлайну — перемотка
+    timeline.addEventListener('click', (e) => {
+      const rect = timeline.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const width = rect.width;
+      const percent = clickX / width;
+      video.currentTime = percent * video.duration;
+    });
+  });
 let currentCenterIndex = 3; // индекс главного видео в массиве (начинаем с 4-го — т.е. index 3)
 
 // 👉 обновление отображения 7 видео
@@ -125,27 +158,13 @@ function updateVideoElements() {
       el.src = videos[videoIndex];
       el.setAttribute("data-index", videoIndex);
     } else {
-      el.style.display = "none";
+    
       el.removeAttribute("data-index");
     }
   }
 
   // 👉 Обновляем состояние кнопок
-  if (currentCenterIndex > 0) {
-    PrevBtn.classList.add("ActiveBtn");
-    PrevBtn.classList.remove("DisableBtn");
-  } else {
-    PrevBtn.classList.add("DisableBtn");
-    PrevBtn.classList.remove("ActiveBtn");
-  }
 
-  if (currentCenterIndex < videos.length - 1) {
-    NextBtn.classList.add("ActiveBtn");
-    NextBtn.classList.remove("DisableBtn");
-  } else {
-    NextBtn.classList.add("DisableBtn");
-    NextBtn.classList.remove("ActiveBtn");
-  }
 }
 
 
@@ -162,6 +181,8 @@ videoElements.forEach((el, i) => {
 
 // 👉 кнопки перелистывания
 NextBtn.addEventListener("click", () => {
+  
+  
   if (currentCenterIndex < videos.length - 1) {
     currentCenterIndex++;
     updateVideoElements();
@@ -169,6 +190,7 @@ NextBtn.addEventListener("click", () => {
 });
 
 PrevBtn.addEventListener("click", () => {
+  console.log(1);
   if (currentCenterIndex > 0) {
     currentCenterIndex--;
     updateVideoElements();
