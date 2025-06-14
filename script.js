@@ -1,4 +1,4 @@
-
+/// header 
 const MenuBtn = document.getElementById('header_bar_btn');
 const HeaderNav = document.getElementById('header_nav');
 var HeaderNavOpen = false;
@@ -92,15 +92,17 @@ const videoElements = [
   document.getElementById('video1'),
   document.getElementById('video2'),
   document.getElementById('video3'),
-  document.getElementById('video4'), // главный
+  document.getElementById('video4'),
   document.getElementById('video5'),
   document.getElementById('video6'),
   document.getElementById('video7')
 ];
 
+// Кнопки навигации
 const PrevBtn = document.getElementById('LeftBtn');
 const NextBtn = document.getElementById('NextBtn');
 
+// Массив всех видео
 const videos = [
   "/assets/video/1.mp4",
   "/assets/video/2.mp4",
@@ -111,65 +113,32 @@ const videos = [
   "/assets/video/7.mp4",
   "/assets/video/8.mp4"
 ];
-const videos2 = document.querySelectorAll('.video-wrapper');
 
-  videos2.forEach(wrapper => {
-    const video = wrapper.querySelector('video');
-    const timeline = wrapper.querySelector('.timeline');
-    const progress = wrapper.querySelector('.progress');
+// Центр слайдера (индекс текущего центрального видео)
+let currentCenterIndex = 3; // начинается с 4-го видео (index = 3)
 
-    // Убрать стандартные controls
-    video.controls = false;
-
-    // Клик по видео — play/pause
-    video.addEventListener('click', () => {
-      if (video.paused) {
-        video.play();
-      } else {
-        video.pause();
-      }
-    });
-
-    // Обновляем прогресс бар
-    video.addEventListener('timeupdate', () => {
-      const percent = (video.currentTime / video.duration) * 100;
-      progress.style.width = `${percent}%`;
-    });
-
-    // Клик по таймлайну — перемотка
-    timeline.addEventListener('click', (e) => {
-      const rect = timeline.getBoundingClientRect();
-      const clickX = e.clientX - rect.left;
-      const width = rect.width;
-      const percent = clickX / width;
-      video.currentTime = percent * video.duration;
-    });
-  });
-let currentCenterIndex = 3; // индекс главного видео в массиве (начинаем с 4-го — т.е. index 3)
-
-// 👉 обновление отображения 7 видео
+// Обновление отображения видео
 function updateVideoElements() {
   for (let i = 0; i < 7; i++) {
     const videoIndex = currentCenterIndex - 3 + i;
-
     const el = videoElements[i];
-    if (videos[videoIndex]) {
+
+    if (videoIndex >= 0 && videoIndex < videos.length) {
       el.style.display = "block";
       el.src = videos[videoIndex];
       el.setAttribute("data-index", videoIndex);
     } else {
-    
+      el.style.display = "none";
       el.removeAttribute("data-index");
     }
   }
 
-  // 👉 Обновляем состояние кнопок
-
+  // Обновление состояния кнопок
+ 
 }
 
-
-// 👉 клик по миниатюре (слева/справа)
-videoElements.forEach((el, i) => {
+// Клик по миниатюре
+videoElements.forEach(el => {
   el.addEventListener("click", () => {
     const clickedIndex = parseInt(el.getAttribute("data-index"));
     if (!isNaN(clickedIndex) && clickedIndex !== currentCenterIndex) {
@@ -179,23 +148,57 @@ videoElements.forEach((el, i) => {
   });
 });
 
-// 👉 кнопки перелистывания
+// Кнопка "вперёд"
 NextBtn.addEventListener("click", () => {
-  
-  
   if (currentCenterIndex < videos.length - 1) {
     currentCenterIndex++;
     updateVideoElements();
   }
 });
 
+// Кнопка "назад"
 PrevBtn.addEventListener("click", () => {
-  console.log(1);
   if (currentCenterIndex > 0) {
     currentCenterIndex--;
     updateVideoElements();
   }
 });
 
-// 👉 начальная отрисовка
+// Кастомные контролы
+const wrappers = document.querySelectorAll('.video-wrapper');
+wrappers.forEach(wrapper => {
+  const video = wrapper.querySelector('video');
+  const timeline = wrapper.querySelector('.timeline');
+  const progress = wrapper.querySelector('.progress');
+
+  video.controls = false;
+video.addEventListener('timeupdate', () => {
+  const percent = (video.currentTime / video.duration) * 100;
+  progress.style.width = `${percent}%`;
+});
+  video.addEventListener('click', () => {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
+
+  video.addEventListener('timeupdate', () => {
+    const percent = (video.currentTime / video.duration) * 100;
+    progress.style.width = `${percent}%`;
+  });
+
+
+  timeline.addEventListener('click', (e) => {
+  const rect = timeline.getBoundingClientRect();
+  const clickX = e.clientX - rect.left;
+  const width = rect.width;
+  const percent = clickX / width;
+  video.currentTime = percent * video.duration;
+});
+
+});
+
+// Начальная инициализация
 updateVideoElements();
