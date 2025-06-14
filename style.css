@@ -921,9 +921,6 @@ header .header_contact_box .header_socials .call {
     font-size: 24px;
   }
 }
-.video_container .pagination_box {
-  z-index: -1;
-}
 @media (max-width: 986px) {
   .video_container .pagination_box {
     display: none;
@@ -948,7 +945,6 @@ header .header_contact_box .header_socials .call {
 .video_container .video_box {
   align-items: center;
   justify-content: center;
-  z-index: 9999999999999;
 }
 @media (max-width: 986px) {
   .video_container .video_box {

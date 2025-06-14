@@ -138,15 +138,7 @@ function updateVideoElements() {
 }
 
 // Клик по миниатюре
-videoElements.forEach(el => {
-  el.addEventListener("click", () => {
-    const clickedIndex = parseInt(el.getAttribute("data-index"));
-    if (!isNaN(clickedIndex) && clickedIndex !== currentCenterIndex) {
-      currentCenterIndex = clickedIndex;
-      updateVideoElements();
-    }
-  });
-});
+
 
 // Кнопка "вперёд"
 NextBtn.addEventListener("click", () => {
@@ -165,40 +157,5 @@ PrevBtn.addEventListener("click", () => {
 });
 
 // Кастомные контролы
-const wrappers = document.querySelectorAll('.video-wrapper');
-wrappers.forEach(wrapper => {
-  const video = wrapper.querySelector('video');
-  const timeline = wrapper.querySelector('.timeline');
-  const progress = wrapper.querySelector('.progress');
 
-  video.controls = false;
-video.addEventListener('timeupdate', () => {
-  const percent = (video.currentTime / video.duration) * 100;
-  progress.style.width = `${percent}%`;
-});
-  video.addEventListener('click', () => {
-    if (video.paused) {
-      video.play();
-    } else {
-      video.pause();
-    }
-  });
-
-  video.addEventListener('timeupdate', () => {
-    const percent = (video.currentTime / video.duration) * 100;
-    progress.style.width = `${percent}%`;
-  });
-
-
-  timeline.addEventListener('click', (e) => {
-  const rect = timeline.getBoundingClientRect();
-  const clickX = e.clientX - rect.left;
-  const width = rect.width;
-  const percent = clickX / width;
-  video.currentTime = percent * video.duration;
-});
-
-});
-
-// Начальная инициализация
 updateVideoElements();

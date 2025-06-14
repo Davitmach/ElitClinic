@@ -870,7 +870,7 @@ p {
     }
   }
   .pagination_box {
-    z-index: -1;
+
       @media (max-width:986px) {
       display: none;
       }
@@ -896,7 +896,8 @@ p {
   .video_box {
     align-items: center;
     justify-content: center;
-    z-index: 9999999999999;
+
+
   @media (max-width:986px) {
     overflow-x: auto;
     justify-content: flex-start;
